@@ -17,3 +17,5 @@ return true;
 
 arr = ["Привет", "приветик"]
 console.log(boolArray(arr))
+
+//процентов на 45 сперла из интернета
