@@ -12,7 +12,7 @@ const twoMerArray = (arr: Array<number>, n: number): Array<Array<number>> => {
     return result;
 }
 
-let arr: Array<number> = [1, 3, 5, 6, 7, 8, 9, 9, 7, 7, 6, 5];
-let n: number = 5;
+const arr: Array<number> = [1, 3, 5, 6, 7, 8, 9, 9, 7, 7, 6, 5];
+const n: number = 5;
 
 console.log(twoMerArray(arr, n))

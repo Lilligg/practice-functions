@@ -4,9 +4,6 @@ const onlyTrueArray = (arr: Array<unknown>): Array<unknown> => {
     return arr.filter((item: unknown): boolean => !!item);
 }
 
-let array: Array<unknown> = [434, 0, 1, 0, 34, "ff", 33];
+const array: Array<unknown> = [434, 0, 1, 0, 34, "ff", 33];
 
 console.log(onlyTrueArray(array));
-
-//Вообще не поняла, как это делать (честно сперла где-то)
-//Старалась решить через цикл и splice()

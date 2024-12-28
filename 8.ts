@@ -18,8 +18,7 @@ const boolArray = (arr: Array<string>): boolean => {
     return true;
 }
 
-let arr: Array<string> = ["Привет", "приветик"];
+const arr: Array<string> = ["Привет", "приветик"];
 
 console.log(boolArray(arr));
 
-//процентов на 45 сперла из интернета

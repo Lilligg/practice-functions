@@ -11,7 +11,7 @@ const fullArray = (arr: Array<number>, n: number): Array<number> => {
     }
 }
 
-let arr: Array<number> = [];
-let n: number = -3;
+const arr: Array<number> = [];
+const n: number = -3;
 
 console.log(fullArray(arr, n));

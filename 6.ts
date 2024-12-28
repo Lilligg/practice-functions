@@ -2,18 +2,23 @@
 //во 2 по порядку начиная с индекса n второго массива и вернуть полученный массив. Входные массивы не должны изменяться.
 //Например: при входных данных ([1,2,3], [4,5], 1) должно вернуться [4,1,2,3,5].
 
-const unifiedArray = (arr1: Array<number>, arr2: Array<number>, n: number): Array<number> => {
-//1 вариант
-//    let result = arr2;
-//    result.splice(n, 0, ...arr1)
-
-//2 вариант (я не знаю, какой лучше)
+const unifiedArray = (arr1: Array<number>, arr2: Array<number>, n: number): {
+    result: Array<number>;
+    arr2: Array<number>;
+    arr1: Array<number>
+} => {
     let result: Array<number> = arr2.slice(0, n);
 
     result.push(...arr1.slice());
     result.push(...arr2.slice(n));
 
-    return (result);
+    const objArray = {
+        result: result,
+        arr2: arr2,
+        arr1: arr1
+    }
+
+    return (objArray);
 }
 
 let arr1: Array<number> = [1, 3, 4];
