@@ -2,14 +2,14 @@
 //которая принимает массив и целое число (n) и заполняет массив числами от n до 1
 
 const fullArray = (arr: Array<number>, n: number): Array<number> => {
-    if (n <= 1) {
-        arr.push(n);
+  if (n <= 1) {
+    arr.push(n);
 
-        return fullArray(arr, n + 1)
-    } else {
-        return arr
-    }
-}
+    return fullArray(arr, n + 1);
+  } else {
+    return arr;
+  }
+};
 
 const arr: Array<number> = [];
 const n: number = -3;

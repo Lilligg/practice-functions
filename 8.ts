@@ -3,22 +3,21 @@
 //все буквы строки во втором элементе массива (регистр игнорируется)
 
 const boolArray = (arr: Array<string>): boolean => {
-    let firstArr: string = arr[0];
-    let secondArr: string = arr[1];
+  let firstArr: string = arr[0];
+  let secondArr: string = arr[1];
 
-    firstArr = firstArr.toLowerCase();
-    secondArr = secondArr.toLowerCase();
+  firstArr = firstArr.toLowerCase();
+  secondArr = secondArr.toLowerCase();
 
-    for (let i: number = 0; i < firstArr.length; i++) {
-        if (secondArr.indexOf(firstArr[i]) === -1) {
-            return false;
-        }
+  for (let i: number = 0; i < firstArr.length; i++) {
+    if (secondArr.indexOf(firstArr[i]) === -1) {
+      return false;
     }
+  }
 
-    return true;
-}
+  return true;
+};
 
 const arr: Array<string> = ["Привет", "приветик"];
 
 console.log(boolArray(arr));
-

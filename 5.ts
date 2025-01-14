@@ -2,16 +2,16 @@
 //каждое слово начинается с заглавной буквы, остальные в нижнем регистре
 
 const upRegister = (value: string): string => {
-    let arrayOfString: Array<string> = value.split(" ");
-    let result: Array<string> = [];
+  const arrayOfString: Array<string> = value.split(" ");
+  const result: Array<string> = [];
 
-    for (let word of arrayOfString) {
-        result.push(word.slice(0, 1).toUpperCase() + word.slice(1));
-    }
+  for (let word of arrayOfString) {
+    result.push(word.slice(0, 1).toUpperCase() + word.slice(1));
+  }
 
-    return result.join(" ");
-}
+  return result.join(" ");
+};
 
 const str: string = "боже как я устала все это писать спаси и сохрани";
 
-console.log(upRegister(str))
+console.log(upRegister(str));
