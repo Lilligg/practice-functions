@@ -3,3 +3,20 @@
 // Например: whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 },
 // { "bat":2 }], { "apple": 1, "bat": 2 })
 // должен вернуться [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie":2 }]
+
+type ObjectType = { [key: string]: any };
+
+const whatIsInAName = (
+  collection: ObjectType[],
+  source: ObjectType,
+): ObjectType[] => {
+  const keys = Object.keys(source);
+
+  return collection.filter((obj) => {
+    return keys.every(
+      (key) => obj.hasOwnProperty(key) && obj[key] === source[key],
+    );
+  });
+};
+
+//сама не решила
