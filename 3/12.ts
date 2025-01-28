@@ -19,3 +19,4 @@ const unpackingArray = (arr: Array<unknown>): Array<unknown> => {
 };
 
 // Честно, не поняла, как сделать, поэтому сперла
+console.log(unpackingArray([1, [2], [3, [[4]]]])); //[1, 2, 3, 4]

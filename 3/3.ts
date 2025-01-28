@@ -7,3 +7,6 @@ const deleteElements = (
 ): Array<unknown> => {
   return arrElements.filter((element) => !deleteEl.includes(element));
 };
+
+console.log(deleteElements([1, 2, 3, 4, 5], 2, 4)); // [1, 3, 5]
+console.log(deleteElements(["груша", "банан", "апельсин", "банан"], "банан")); //[груша, апельсин]

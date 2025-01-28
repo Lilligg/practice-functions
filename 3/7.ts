@@ -2,15 +2,23 @@
 //Если все буквы присутствуют в диапазоне, то возвращается undefined. Например: fearNotLetter("abce") должна вернуть "d"
 
 const fearNotLetter = (str: string): string | undefined => {
-  const startCode = str.charCodeAt(0);
+  const arrElement: Array<string> = [];
 
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length - 1; i++) {
     const currentCode = str.charCodeAt(i);
+    const nextCode = str.charCodeAt(i + 1);
 
-    if (currentCode !== startCode + i) {
-      return String.fromCharCode(startCode + i);
+    if (nextCode - currentCode > 1) {
+      for (let j = currentCode + 1; j < nextCode; j++) {
+        arrElement.push(String.fromCharCode(j));
+      }
     }
   }
 
-  return undefined;
+  if (arrElement.length > 0) return arrElement.join();
+  else return undefined;
 };
+
+console.log(fearNotLetter("abce")); // d
+console.log(fearNotLetter("abcdefghjklmno")); // i
+console.log(fearNotLetter("абгдежк")); // в,з,и,й

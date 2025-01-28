@@ -20,3 +20,18 @@ const whatIsInAName = (
 };
 
 //сама не решила
+
+const collection1 = [
+  { apple: 1, bat: 2 },
+  { apple: 1 },
+  { apple: 1, bat: 2, cookie: 2 },
+  { bat: 2 },
+];
+const source1 = { apple: 1, bat: 2 };
+console.log(whatIsInAName(collection1, source1));
+//[ { apple: 1, bat: 2 }, { apple: 1, bat: 2, cookie: 2 } ]
+
+const collection2 = [{ banana: 3 }, { orange: 4 }];
+const source2 = { apple: 1 };
+console.log(whatIsInAName(collection2, source2));
+//[]

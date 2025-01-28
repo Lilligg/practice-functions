@@ -7,4 +7,5 @@ const changeWord = (str: string, oldWord: string, newWord: string): string => {
   return str;
 };
 
-console.log(changeWord("Привет, меня зовут Алиса", "Алиса", "Лида"));
+console.log(changeWord("Привет, меня зовут Алиша", "Алиша", "Лида")); // Привет, меня зовут Лида
+// :(

@@ -7,5 +7,13 @@ const replacementSymbolHTML = (str: string): string => {
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
-    .replaceAll("‘", "&#39;");
+    .replaceAll("‘", "&apos;");
 };
+
+console.log(
+  replacementSymbolHTML(
+    'Привет & скоро будут стрелочки <вот они> "кавычки" и ‘апостроф‘',
+  ),
+);
+
+//Привет &amp; скоро будут стрелочки &lt;вот они&gt; &quot;кавычки&quot; и &apos;апостроф&apos;
