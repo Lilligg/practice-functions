@@ -3,9 +3,12 @@
 // третий аргумент - слово, на которое нужно заменить. При замене сохраняйте регистр первого символа в исходном слове.
 
 const changeWord = (str: string, oldWord: string, newWord: string): string => {
-  str = str.replace(oldWord, newWord);
-  return str;
+  if (oldWord[0] === oldWord.toLowerCase()) {
+    newWord = newWord[0].toLowerCase() + newWord.slice(1);
+  } else {
+    newWord = newWord[0].toUpperCase() + newWord.slice(1);
+  }
+  return str.replace(oldWord, newWord);
 };
 
-console.log(changeWord("Привет, меня зовут Алиша", "Алиша", "Лида")); // Привет, меня зовут Лида
-// :(
+console.log(changeWord("Привет, меня зовут Алиша", "Алиша", "лида")); // Привет, меня зовут Лида

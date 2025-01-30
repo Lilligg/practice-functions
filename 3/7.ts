@@ -15,8 +15,11 @@ const fearNotLetter = (str: string): string | undefined => {
     }
   }
 
-  if (arrElement.length > 0) return arrElement.join();
-  else return undefined;
+  if (arrElement.length > 0) {
+    return arrElement.join();
+  }
+
+  return undefined;
 };
 
 console.log(fearNotLetter("abce")); // d
